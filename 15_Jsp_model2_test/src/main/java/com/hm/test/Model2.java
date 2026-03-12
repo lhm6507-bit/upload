@@ -1,0 +1,33 @@
+package com.hm.test;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class Model2 {
+    public static void makeInfo(HttpServletRequest request) {
+      String name=  request.getParameter("name");
+       String age = request.getParameter("age");
+       String gender = request.getParameter("gender");
+       String [] habit = request.getParameterValues("habit");
+
+        System.out.println(name);
+        System.out.println(age);
+        System.out.println(gender);
+
+
+            String habit2 = "";
+       for (String h : habit){
+           System.out.println(h);
+           habit2 += h + " / ";
+       }
+        // 결과에서 필요한거
+        // 한 번에 뭉쳐서 보내자 (객체)
+        Result r = new Result(name, age, gender, habit2);
+
+       request.setAttribute("result",r);
+
+    }
+
+
+
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <style>
+ body{
+background:#e9f0f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:sans-serif;
+}
+
+.box{
+background:#bcd9e6;
+padding:40px;
+width:300px;
+text-align:center;
+border-radius:10px;
+border:2px solid #4a6b7a;
+}
+
+input, select{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+
+width:100%;
+padding:10px;
+background:#5a8bd6;
+color:white;
+border:none;
+cursor:pointer;
+
+}
+
+button:hover{
+background:#3f6fb5;
+}
+ 
+ 
+ </style>
+</head>
+<body>
+<div class="box">
+
+<h2>단위변환</h2>
+
+<form action="unit_output.jsp">
+<label>변환할 값</label>
+   <input type="number" name="value" required>
+   <label>단위</label>
+<select name = "unit">
+<option value="">단위를 선택하세요 </option>
+<option value="cm">cm -> inch </option>
+<option value="m">㎡-> 평 </option>
+<option value="c">℃-> ℉ </option>
+<option value="km">km/h -> mi/h </option>
+</select>
+
+<button type="submit">확인</button>
+</form>
+</div>
+</body>
+</html>
